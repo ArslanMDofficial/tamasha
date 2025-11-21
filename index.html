@@ -1,115 +1,854 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Tamasha Packages — Developed by Ramzan Ahsan</title>
-<link rel="icon" href="https://i.postimg.cc/wvVLT7dR/card.jpg">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Tamasha Packages — Developed by Arslan-Tech</title>
+    <link rel="icon" href="https://i.postimg.cc/wvVLT7dR/card.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- ✅ Monetag verification -->
+    <meta name="monetag" content="b805f1bd7c6023d0341a4d15bd8fe547">
+    
+    <!-- ✅ Additional Meta Tags for SEO -->
+    <meta name="description" content="Tamasha Packages - Get high-speed internet packages with OTP activation. Daily, weekly, and monthly plans available.">
+    <meta name="keywords" content="tamasha packages, internet packages, OTP activation, mobile data, pakistan internet">
+    <meta name="author" content="Arslan-Tech">
 
-<!-- ✅ Monetag verification -->
-<meta name="monetag" content="b805f1bd7c6023d0341a4d15bd8fe547">
-
-<style>
-:root{
-  --accent1:#00eaff;
-  --accent2:#ff007f;
-  --card-bg:rgba(255,255,255,0.05);
-}
-*{box-sizing:border-box;margin:0;padding:0;font-family:'Poppins',sans-serif;}
-body{
-  background:linear-gradient(120deg,#0b0c1a,#12092a,#1b0b18);
-  color:#fff;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  min-height:100vh;
-  padding:20px;
-}
-header{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  width:100%;
-  max-width:480px;
-  background:rgba(255,255,255,0.03);
-  border-radius:999px;
-  padding:8px 14px;
-  box-shadow:0 6px 24px rgba(0,0,0,0.36);
-  backdrop-filter:blur(6px);
-  margin-top:20px;
-}
-header img{width:42px;height:42px;border-radius:50%;object-fit:cover;border:2px solid rgba(255,255,255,0.2);}
-header h1{font-size:18px;font-weight:700;text-align:center;flex:1;margin:0 10px;background:linear-gradient(90deg,#00eaff,#ff007f,#ffea00,#00eaff,#ff007f);background-size:300% 100%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:gradientMove 4s linear infinite;}
-@keyframes gradientMove{0%{background-position:0% 0%;}50%{background-position:100% 0%;}100%{background-position:0% 0%;}}
-.card{width:100%;max-width:480px;background:var(--card-bg);border-radius:16px;padding:24px;margin-top:40px;border:1px solid rgba(255,255,255,0.2);box-shadow:0 0 30px rgba(0,234,255,0.15);backdrop-filter:blur(6px);}
-h2{text-align:center;margin-bottom:15px;color:var(--accent1);}
-input[type="text"], input[type="tel"], select{
-  width:100%;padding:14px;border-radius:12px;border:none;background:rgba(255,255,255,0.1);color:white;margin-bottom:12px;font-size:15px;outline:none;
-}
-input:focus, select:focus{box-shadow:0 0 10px var(--accent1);}
-button{width:100%;padding:14px;border:none;border-radius:12px;background:linear-gradient(90deg,var(--accent2),var(--accent1));color:white;font-weight:600;cursor:pointer;transition:0.3s;margin-bottom:12px;}
-button:hover{transform:scale(1.05);box-shadow:0 0 15px var(--accent1);}
-#loader{display:none;text-align:center;margin-top:18px;}
-.loader{border:5px solid rgba(255,255,255,0.1);border-top:5px solid var(--accent1);border-radius:50%;width:45px;height:45px;animation:spin 1s linear infinite;margin:10px auto;}
-@keyframes spin{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}
-#responseBlock{margin-top:18px; display:none;}
-.success { color:#065f46; background:#ecfdf5; padding:10px; border-radius:8px; border:1px solid #bbf7d0; }
-.error { color:#7f1d1d; background:#fff1f2; padding:10px; border-radius:8px; border:1px solid #fecaca; }
-.cols { display:grid; gap:12px; grid-template-columns: 1fr 1fr; }
-.center { text-align:center; }
-.inline { display:inline-block; vertical-align:middle; }
-.selected { border:2px solid var(--accent1); }
-@media (max-width:640px){ .cols { grid-template-columns: 1fr; } .inline { display:block; margin-top:8px; } }
-
-/* Ads container styling */
-.ad-top{
-  width:100%;
-  max-width:480px;
-  margin:18px 0;
-  display:flex;
-  justify-content:center;
-}
-</style>
+    <style>
+        :root {
+            --accent1: #00eaff;
+            --accent2: #ff007f;
+            --accent3: #ffea00;
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0b0c1a 0%, #12092a 50%, #1b0b18 100%);
+            color: #fff;
+            min-height: 100vh;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+        
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(0, 234, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 0, 127, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(255, 234, 0, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        
+        .container {
+            max-width: 480px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Header Styles */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            padding: 12px 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 30px;
+            animation: slideDown 0.6s ease-out;
+        }
+        
+        .logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--accent1);
+            box-shadow: 0 0 20px rgba(0, 234, 255, 0.3);
+        }
+        
+        .title {
+            font-size: 18px;
+            font-weight: 700;
+            text-align: center;
+            flex: 1;
+            margin: 0 15px;
+            background: linear-gradient(90deg, var(--accent1), var(--accent2), var(--accent3), var(--accent1));
+            background-size: 300% 100%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientMove 4s linear infinite;
+        }
+        
+        @keyframes gradientMove {
+            0% { background-position: 0% 0%; }
+            50% { background-position: 100% 0%; }
+            100% { background-position: 0% 0%; }
+        }
+        
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Card Styles */
+        .card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 
+                0 8px 32px rgba(0, 0, 0, 0.3),
+                0 0 50px rgba(0, 234, 255, 0.1);
+            backdrop-filter: blur(10px);
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .card-title {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--accent1);
+            text-shadow: 0 0 10px rgba(0, 234, 255, 0.3);
+        }
+        
+        /* Input Styles */
+        .input-group {
+            margin-bottom: 20px;
+        }
+        
+        .input-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 14px;
+        }
+        
+        input[type="text"], 
+        input[type="tel"], 
+        select {
+            width: 100%;
+            padding: 16px;
+            border-radius: 12px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.08);
+            color: white;
+            font-size: 16px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+        
+        input:focus, 
+        select:focus {
+            border-color: var(--accent1);
+            box-shadow: 0 0 20px rgba(0, 234, 255, 0.3);
+            background: rgba(255, 255, 255, 0.12);
+        }
+        
+        input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+        /* Button Styles */
+        .btn {
+            width: 100%;
+            padding: 16px;
+            border: none;
+            border-radius: 12px;
+            background: linear-gradient(135deg, var(--accent2), var(--accent1));
+            color: white;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .btn:hover::before {
+            left: 100%;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 
+                0 10px 25px rgba(255, 0, 127, 0.3),
+                0 0 30px rgba(0, 234, 255, 0.3);
+        }
+        
+        .btn:active {
+            transform: translateY(0);
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+        }
+        
+        .btn-success {
+            background: linear-gradient(135deg, #10b981, #059669);
+        }
+        
+        .btn-warning {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+        }
+        
+        /* Grid Layout */
+        .cols {
+            display: grid;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .grid-2 {
+            grid-template-columns: 1fr 1fr;
+        }
+        
+        .grid-4 {
+            grid-template-columns: 1fr 1fr;
+        }
+        
+        /* Status Indicators */
+        .status {
+            padding: 10px;
+            border-radius: 8px;
+            margin-top: 10px;
+            font-size: 14px;
+            text-align: center;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        .status-success {
+            background: rgba(16, 185, 129, 0.2);
+            border: 1px solid rgba(16, 185, 129, 0.5);
+            color: #10b981;
+        }
+        
+        .status-error {
+            background: rgba(239, 68, 68, 0.2);
+            border: 1px solid rgba(239, 68, 68, 0.5);
+            color: #ef4444;
+        }
+        
+        .status-info {
+            background: rgba(59, 130, 246, 0.2);
+            border: 1px solid rgba(59, 130, 246, 0.5);
+            color: #3b82f6;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        /* Loader */
+        #loader {
+            display: none;
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .loader {
+            border: 3px solid rgba(255, 255, 255, 0.1);
+            border-top: 3px solid var(--accent1);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 10px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Response Block */
+        #responseBlock {
+            display: none;
+            margin-top: 20px;
+            animation: slideUp 0.4s ease;
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .response-success {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            color: #10b981;
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        
+        .response-error {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            color: #ef4444;
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        
+        /* Package Cards */
+        .package-grid {
+            display: grid;
+            gap: 12px;
+            margin: 20px 0;
+        }
+        
+        .package-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .package-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--accent1);
+            transform: translateY(-2px);
+        }
+        
+        .package-card.selected {
+            background: rgba(0, 234, 255, 0.1);
+            border-color: var(--accent1);
+            box-shadow: 0 0 20px rgba(0, 234, 255, 0.2);
+        }
+        
+        .package-name {
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: var(--accent1);
+        }
+        
+        .package-details {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 14px;
+        }
+        
+        .developer {
+            background: linear-gradient(90deg, var(--accent1), var(--accent2));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 600;
+        }
+        
+        .owner {
+            background: linear-gradient(90deg, var(--accent3), var(--accent1));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+            font-size: 16px;
+            margin-top: 5px;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 640px) {
+            .container {
+                padding: 0 10px;
+            }
+            
+            .grid-2,
+            .grid-4 {
+                grid-template-columns: 1fr;
+            }
+            
+            .card {
+                padding: 20px;
+            }
+            
+            .title {
+                font-size: 16px;
+            }
+            
+            header {
+                padding: 10px 15px;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .grid-4 {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        /* Floating Animation */
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        /* Pulse Animation */
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(0, 234, 255, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(0, 234, 255, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 234, 255, 0); }
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <!-- Header -->
+        <header class="floating">
+            <img src="https://files.catbox.moe/16i1l7.jpg" alt="Tamasha Packages" class="logo pulse">
+            <h1 class="title">⚡ ArslanMD Official ⚡</h1>
+        </header>
 
-<header>
-  <h1>⚡ Tamasha Packages develoled by Ramzan Ahsan ⚡</h1>
-</header>
+        <!-- Main Card -->
+        <section class="card">
+            <h2 class="card-title">📱 OTP Activation</h2>
+            
+            <!-- Phone Number Input -->
+            <div class="input-group">
+                <label class="input-label">📞 Phone Number</label>
+                <input 
+                    id="msisdn" 
+                    type="tel" 
+                    inputmode="numeric" 
+                    placeholder="+923XXXXXXXXX" 
+                    maxlength="14"
+                />
+            </div>
 
-<section class="card">
-  <h2>📱 OTP Activation</h2>
-  <input id="msisdn" type="tel" inputmode="numeric" placeholder="+923XXXXXXXXX" maxlength="14" />
-  
-  <div class="cols" style="margin-top:10px;">
-    <div>
-      <input id="otp" type="text" placeholder="Enter OTP" maxlength="8" />
+            <!-- OTP Section -->
+            <div class="cols grid-2">
+                <div class="input-group">
+                    <label class="input-label">🔑 OTP Code</label>
+                    <input 
+                        id="otp" 
+                        type="text" 
+                        placeholder="Enter OTP" 
+                        maxlength="8" 
+                    />
+                </div>
+                <div style="display: flex; flex-direction: column; justify-content: flex-end;">
+                    <button id="getOtpBtn" class="btn btn-secondary">
+                        Get OTP
+                    </button>
+                </div>
+            </div>
+
+            <!-- OTP Status -->
+            <div id="otpStatus" class="status" style="display: none;"></div>
+
+            <!-- Package Selection -->
+            <div class="package-grid grid-4">
+                <div class="package-card" data-package="1_day">
+                    <div class="package-name">1 Day</div>
+                    <div class="package-details">2 GB Data</div>
+                </div>
+                <div class="package-card" data-package="3_day">
+                    <div class="package-name">3 Days</div>
+                    <div class="package-details">5 GB Data</div>
+                </div>
+                <div class="package-card" data-package="weekly">
+                    <div class="package-name">Weekly</div>
+                    <div class="package-details">10 GB Data</div>
+                </div>
+                <div class="package-card" data-package="monthly">
+                    <div class="package-name">Monthly</div>
+                    <div class="package-details">25 GB Data</div>
+                </div>
+            </div>
+
+            <!-- Activation Buttons -->
+            <div class="cols grid-2">
+                <button id="activate1Btn" class="btn btn-success" data-package="1_day">
+                    Activate 1 Day
+                </button>
+                <button id="activate3Btn" class="btn btn-success" data-package="3_day">
+                    Activate 3 Days
+                </button>
+                <button id="activate7Btn" class="btn btn-warning" data-package="weekly">
+                    Activate Weekly
+                </button>
+                <button id="activate30Btn" class="btn btn-warning" data-package="monthly">
+                    Activate Monthly
+                </button>
+            </div>
+
+            <!-- Loader -->
+            <div id="loader">
+                <div class="loader"></div>
+                <p>Processing your request...</p>
+            </div>
+
+            <!-- Response Block -->
+            <div id="responseBlock">
+                <div id="responseMsg"></div>
+            </div>
+        </section>
+
+        <!-- Info Card -->
+        <section class="card">
+            <h2 class="card-title">ℹ️ How to Use</h2>
+            <div style="line-height: 1.6;">
+                <p>1. Enter your phone number (format: +923XXXXXXXXX)</p>
+                <p>2. Click "Get OTP" to receive verification code</p>
+                <p>3. Enter the OTP you received via SMS</p>
+                <p>4. Select your desired package and click activate</p>
+                <p>5. Wait for confirmation message</p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>💫 Developed by <span class="developer">Arslan-Tech</span></p>
+            <p class="owner">🏆 ArslanMD Official</p>
+            <p style="font-size: 12px; margin-top: 5px; opacity: 0.7;">
+                High-speed internet packages with instant activation • 2025
+            </p>
+        </footer>
     </div>
-    <div class="center" style="align-self:end;">
-      <div class="flex items-center justify-center gap-2">
-        <button id="getOtpBtn">Get OTP</button>
-        <div id="otpStatus" class="inline"></div>
-      </div>
-    </div>
-  </div>
 
-  <div class="grid gap-3 sm:grid-cols-2 md:grid-cols-4" style="margin-top:14px;">
-    <button id="activate1Btn">1 Day — 2 GB</button>
-    <button id="activate3Btn">3 Day — 5 GB</button>
-    <button id="activate7Btn">Weekly — 10 GB</button>
-    <button id="activate30Btn">Monthly — 25 GB</button>
-  </div>
+    <!-- JavaScript -->
+    <script>
+        // Configuration
+        const CONFIG = {
+            BASE_URL: 'https://tamasha.pythonanywhere.com',
+            ENDPOINTS: {
+                OTP: '/get_otp',
+                ACTIVATE: '/activate'
+            },
+            PACKAGES: {
+                '1_day': { name: '1 Day — 2 GB', code: '1_day' },
+                '3_day': { name: '3 Day — 5 GB', code: '3_day' },
+                'weekly': { name: 'Weekly — 10 GB', code: 'weekly' },
+                'monthly': { name: 'Monthly — 25 GB', code: 'monthly' }
+            }
+        };
 
-  <div id="loader"><div class="loader"></div><p>Processing...</p></div>
+        // DOM Elements
+        const elements = {
+            msisdn: document.getElementById('msisdn'),
+            otp: document.getElementById('otp'),
+            getOtpBtn: document.getElementById('getOtpBtn'),
+            activate1Btn: document.getElementById('activate1Btn'),
+            activate3Btn: document.getElementById('activate3Btn'),
+            activate7Btn: document.getElementById('activate7Btn'),
+            activate30Btn: document.getElementById('activate30Btn'),
+            loader: document.getElementById('loader'),
+            responseBlock: document.getElementById('responseBlock'),
+            responseMsg: document.getElementById('responseMsg'),
+            otpStatus: document.getElementById('otpStatus'),
+            packageCards: document.querySelectorAll('.package-card')
+        };
 
-  <div id="responseBlock">
-    <div id="responseMsg"></div>
-  </div>
-</section>
+        // State Management
+        let state = {
+            selectedPackage: null,
+            otpSent: false,
+            phoneNumber: ''
+        };
 
-<footer>💫 Developed by Ramzan Ahsan — 2025</footer>
+        // Utility Functions
+        const utils = {
+            formatPhoneNumber: (value) => {
+                let numbers = value.replace(/\D/g, '');
+                if (numbers.startsWith('92')) {
+                    numbers = '+' + numbers;
+                } else if (numbers.startsWith('0')) {
+                    numbers = '+92' + numbers.substring(1);
+                } else if (!numbers.startsWith('92')) {
+                    numbers = '+92' + numbers;
+                }
+                return numbers.substring(0, 14);
+            },
 
-<script src="tamsha.js"></script>
+            validatePhoneNumber: (number) => {
+                const regex = /^\+923[0-9]{9}$/;
+                return regex.test(number);
+            },
+
+            validateOTP: (otp) => {
+                return otp.length >= 4 && otp.length <= 8 && /^\d+$/.test(otp);
+            },
+
+            showLoader: () => {
+                elements.loader.style.display = 'block';
+                elements.responseBlock.style.display = 'none';
+            },
+
+            hideLoader: () => {
+                elements.loader.style.display = 'none';
+            },
+
+            showResponse: (message, isSuccess = true) => {
+                elements.responseMsg.innerHTML = message;
+                elements.responseMsg.className = isSuccess ? 'response-success' : 'response-error';
+                elements.responseBlock.style.display = 'block';
+                
+                if (isSuccess) {
+                    setTimeout(() => {
+                        elements.responseBlock.style.display = 'none';
+                    }, 5000);
+                }
+            },
+
+            showOtpStatus: (message, isSuccess = true) => {
+                elements.otpStatus.textContent = message;
+                elements.otpStatus.className = `status ${isSuccess ? 'status-success' : 'status-error'}`;
+                elements.otpStatus.style.display = 'block';
+                
+                setTimeout(() => {
+                    elements.otpStatus.style.display = 'none';
+                }, 3000);
+            },
+
+            selectPackage: (packageCode) => {
+                // Remove selected class from all packages
+                elements.packageCards.forEach(card => {
+                    card.classList.remove('selected');
+                });
+                
+                // Add selected class to clicked package
+                const selectedCard = document.querySelector(`[data-package="${packageCode}"]`);
+                if (selectedCard) {
+                    selectedCard.classList.add('selected');
+                }
+                
+                state.selectedPackage = packageCode;
+            }
+        };
+
+        // Event Handlers
+        const handlers = {
+            // Phone number input formatting
+            handlePhoneInput: (e) => {
+                const formatted = utils.formatPhoneNumber(e.target.value);
+                e.target.value = formatted;
+                state.phoneNumber = formatted;
+            },
+
+            // Get OTP
+            handleGetOtp: async () => {
+                const phoneNumber = elements.msisdn.value.trim();
+                
+                if (!utils.validatePhoneNumber(phoneNumber)) {
+                    utils.showOtpStatus('❌ Please enter a valid phone number (+923XXXXXXXXX)', false);
+                    return;
+                }
+
+                utils.showLoader();
+                
+                try {
+                    const response = await fetch(`${CONFIG.BASE_URL}${CONFIG.ENDPOINTS.OTP}`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            msisdn: phoneNumber
+                        })
+                    });
+
+                    const data = await response.json();
+                    
+                    utils.hideLoader();
+                    
+                    if (data.status === 'success') {
+                        utils.showOtpStatus('✅ OTP sent successfully! Check your phone.', true);
+                        state.otpSent = true;
+                    } else {
+                        utils.showOtpStatus(`❌ ${data.message || 'Failed to send OTP'}`, false);
+                    }
+                } catch (error) {
+                    utils.hideLoader();
+                    utils.showOtpStatus('❌ Network error. Please try again.', false);
+                    console.error('OTP Error:', error);
+                }
+            },
+
+            // Activate Package
+            handleActivatePackage: async (packageCode) => {
+                if (!state.otpSent) {
+                    utils.showResponse('⚠️ Please get OTP first before activating package.', false);
+                    return;
+                }
+
+                const phoneNumber = elements.msisdn.value.trim();
+                const otp = elements.otp.value.trim();
+
+                if (!utils.validatePhoneNumber(phoneNumber)) {
+                    utils.showResponse('❌ Please enter a valid phone number', false);
+                    return;
+                }
+
+                if (!utils.validateOTP(otp)) {
+                    utils.showResponse('❌ Please enter a valid OTP (4-8 digits)', false);
+                    return;
+                }
+
+                if (!packageCode) {
+                    utils.showResponse('❌ Please select a package', false);
+                    return;
+                }
+
+                utils.showLoader();
+
+                try {
+                    const response = await fetch(`${CONFIG.BASE_URL}${CONFIG.ENDPOINTS.ACTIVATE}`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            msisdn: phoneNumber,
+                            otp: otp,
+                            package: packageCode
+                        })
+                    });
+
+                    const data = await response.json();
+                    
+                    utils.hideLoader();
+                    
+                    if (data.status === 'success') {
+                        utils.showResponse(
+                            `🎉 Package activated successfully!<br><br>
+                            📦 <strong>${CONFIG.PACKAGES[packageCode].name}</strong><br>
+                            📞 <strong>${phoneNumber}</strong><br>
+                            ✅ <strong>Status: Active</strong><br><br>
+                            Enjoy your high-speed internet! 🚀<br>
+                            <small>Powered by ArslanMD Official</small>`,
+                            true
+                        );
+                        
+                        // Reset form
+                        elements.otp.value = '';
+                        state.otpSent = false;
+                    } else {
+                        utils.showResponse(`❌ Activation failed: ${data.message || 'Unknown error'}`, false);
+                    }
+                } catch (error) {
+                    utils.hideLoader();
+                    utils.showResponse('❌ Network error. Please check your connection and try again.', false);
+                    console.error('Activation Error:', error);
+                }
+            }
+        };
+
+        // Event Listeners
+        document.addEventListener('DOMContentLoaded', () => {
+            // Phone number input
+            elements.msisdn.addEventListener('input', handlers.handlePhoneInput);
+            
+            // Get OTP button
+            elements.getOtpBtn.addEventListener('click', handlers.handleGetOtp);
+            
+            // Package selection cards
+            elements.packageCards.forEach(card => {
+                card.addEventListener('click', () => {
+                    const packageCode = card.dataset.package;
+                    utils.selectPackage(packageCode);
+                });
+            });
+            
+            // Activation buttons
+            elements.activate1Btn.addEventListener('click', () => handlers.handleActivatePackage('1_day'));
+            elements.activate3Btn.addEventListener('click', () => handlers.handleActivatePackage('3_day'));
+            elements.activate7Btn.addEventListener('click', () => handlers.handleActivatePackage('weekly'));
+            elements.activate30Btn.addEventListener('click', () => handlers.handleActivatePackage('monthly'));
+            
+            // Enter key support for OTP
+            elements.otp.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter' && state.selectedPackage) {
+                    handlers.handleActivatePackage(state.selectedPackage);
+                }
+            });
+        });
+
+        // Service Worker for PWA (optional)
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/tamasha.js')
+                    .then(registration => {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(registrationError => {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+    </script>
 </body>
 </html>
